@@ -1,0 +1,94 @@
+:root {
+  --brand:#8b1538;
+  --brand-2:#6a0f2e;
+  --bg:#f8f7f9;
+  --card:#ffffff;
+  --ink:#2b2b2b;
+  --muted:#6a6a6a;
+}
+
+* { box-sizing:border-box; }
+body {
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+}
+
+/* Header */
+.site-header {
+  background:var(--brand);
+  color:#fff;
+  text-align:center;
+  padding:1.2rem 0;
+}
+.brand { margin:0; font-size:2rem; }
+
+/* Nav */
+.site-nav {
+  background:var(--brand-2);
+}
+.site-nav .wrap {
+  display:flex;
+  justify-content:center;
+  gap:1rem;
+  padding:.6rem 0;
+}
+.nav-link {
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* Hero */
+.hero {
+  background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('https://images.unsplash.com/photo-1606851092955-13d1a01a57a5') center/cover;
+  color:#fff;
+  text-align:center;
+  padding:4rem 1rem;
+}
+.hero h2 { margin:0; font-size:2rem; }
+.btn {
+  background:#fff;
+  color:var(--brand);
+  padding:.6rem 1rem;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* Container */
+.wrap { width:90%; max-width:1000px; margin:auto; }
+.card { background:#fff; padding:1.5rem; border-radius:10px; margin-top:2rem; }
+.card-sm { background:#fff; padding:1rem; border-radius:10px; }
+
+/* Form */
+.grid-form { display:grid; gap:1rem; }
+.grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+.grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
+.full { grid-column:1/-1; }
+
+label { font-weight:bold; display:block; margin-bottom:.3rem; }
+input,select {
+  width:100%;
+  padding:.6rem;
+  border:1px solid #ccc;
+  border-radius:6px;
+}
+
+.check-row { display:flex; align-items:center; gap:.5rem; font-weight:bold; }
+.tcs-block { display:none; padding:1rem; border:1px dashed var(--brand); border-radius:8px; margin-top:1rem; }
+
+/* Plans */
+.plans { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:1rem; }
+.plan { text-align:center; border:1px solid #ddd; }
+.price { font-size:1.3rem; color:var(--brand); font-weight:bold; }
+
+/* CSS only toggle for TCS */
+#tcsCheck:checked ~ #tcsFields { display:block; }
+#tcsCheck:checked ~ .plans #tcsPlan { display:block; }
+.plan-tcs { display:none; }
+
+/* Footer */
+.site-footer { text-align:center; padding:1.5rem 0; color:var(--muted); margin-top:2rem; }
