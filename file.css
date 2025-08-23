@@ -40,7 +40,7 @@ body {
   font-weight:bold;
 }
 
-/* Hero */
+/* Hero h*/
 .hero {
   background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
     url('https://images.unsplash.com/photo-1606851092955-13d1a01a57a5') center/cover;
